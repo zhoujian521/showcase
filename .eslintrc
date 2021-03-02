@@ -2,5 +2,9 @@
   "extends": "eslint-config-egg/typescript",
   "parserOptions": {
     "project": "./tsconfig.json"
+  },
+  "rules": {
+    "indent": ["off", 4],
+    "quotes": [1, "double"]
   }
 }
