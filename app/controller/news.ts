@@ -1,4 +1,3 @@
-// app/controller/home.ts
 import { Controller } from "egg";
 
 export default class NewsController extends Controller {
