@@ -19,4 +19,9 @@ export default (app: Application) => {
   router.post("/jenkins/getConfigXml", controller.jenkins.getConfigXml);
 
   router.post("/jenkins/getAllJobsInView", controller.jenkins.getAllJobsInView);
+
+  router.post("/user/addUser", controller.user.addUser);
+  router.post("/user/deleteUser", controller.user.deleteUser);
+  router.post("/user/updateUser", controller.user.updateUser);
+  router.post("/user/getUserList", controller.user.getUserList);
 };
