@@ -12,11 +12,11 @@ export default class NewsController extends Controller {
   public async getList() {
     const { ctx, service } = this;
     const result = await service.news.list();
-    return (ctx.body = {
+    ctx.body = {
       code: 0,
       msg: "success",
       data: result,
-    });
+    };
   }
 
   public async create() {
@@ -25,11 +25,11 @@ export default class NewsController extends Controller {
     // 如果参数校验未通过，将会抛出一个 status = 422 的异常
     ctx.validate(createRule, ctx.request.body);
     // 调用 service 创建一个 topic
-    const id = await ctx.service.news.create();
-    // 设置响应体和状态码
-    ctx.status = 201;
+    const result = await ctx.service.news.create();
     ctx.body = {
-      topic_id: id,
+      code: 0,
+      msg: "success",
+      data: result,
     };
   }
 }
