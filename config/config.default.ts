@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-03-02 16:10:43
+ * @LastEditTime: 2021-03-05 09:30:22
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /showcase/config/config.default.ts
+ */
 import { EggAppConfig, EggAppInfo, PowerPartial } from "egg";
 
 export default (appInfo: EggAppInfo) => {
@@ -20,6 +28,13 @@ export default (appInfo: EggAppInfo) => {
     csrf: {
       enable: false,
     },
+  };
+
+  // 加载 errorHandler 中间件
+  config.middleware = ["errorHandler"];
+  // 只对 /api 前缀的 url 路径生效
+  config.errorHandler = {
+    match: "/api",
   };
 
   // the return config will combines to EggAppConfig

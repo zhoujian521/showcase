@@ -24,4 +24,7 @@ export default (app: Application) => {
   router.post("/user/deleteUser", controller.user.deleteUser);
   router.post("/user/updateUser", controller.user.updateUser);
   router.post("/user/getUserList", controller.user.getUserList);
+
+  router.resources("topics", "/api/v2/topics", controller.news.create);
+  router.post("/api/v2/topics", controller.news.create);
 };
