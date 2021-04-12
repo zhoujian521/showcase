@@ -28,7 +28,8 @@
     "egg-sequelize": "^6.0.0",
     "egg-validate": "^2.0.2",
     "jenkins-api": "^0.3.1",
-    "mysql2": "^2.2.5"
+    "mysql2": "^2.2.5",
+    "nodegit": "^0.27.0"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.40",
