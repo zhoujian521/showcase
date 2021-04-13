@@ -28,5 +28,5 @@ export default (app: Application) => {
   router.resources("topics", "/api/v2/topics", controller.news.create);
   router.post("/api/v2/topics", controller.news.create);
 
-  router.post("/api" + "/github/createContent", controller.github.index);
+  router.post("/api/github/createContent", controller.github.index);
 };

@@ -47,7 +47,7 @@ export default class JenkinsService extends Service {
   public async getLastBuildInfo(job: string) {
     const { app } = this;
     return new Promise((resolve, reject) => {
-      app.jenkins.last_build_info(job, function (error, data) {
+      app.jenkins.last_build_info(job, function(error, data) {
         if (error) {
           reject(error);
           return;
@@ -57,13 +57,14 @@ export default class JenkinsService extends Service {
     });
   }
 
+
   public async copyJob(source: string, target: string) {
     const { app } = this;
     return new Promise((resolve, reject) => {
       app.jenkins.copy_job(
         source,
         target,
-        (data) => {
+        data => {
           return data;
           // return data.replace("development", "feature-branch");
         },
@@ -73,7 +74,7 @@ export default class JenkinsService extends Service {
             return;
           }
           resolve(data);
-        }
+        },
       );
     });
   }
@@ -139,7 +140,7 @@ export default class JenkinsService extends Service {
   public async getAllJobsInView(viewName: string) {
     const { app } = this;
     return new Promise((resolve, reject) => {
-      app.jenkins.all_jobs_in_view(viewName, function (error, data) {
+      app.jenkins.all_jobs_in_view(viewName, function(error, data) {
         if (error) {
           console.log(error);
           reject(error);

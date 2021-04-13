@@ -31,7 +31,7 @@ export default (appInfo: EggAppInfo) => {
   };
 
   // 加载 errorHandler 中间件
-  config.middleware = ["errorHandler"];
+  config.middleware = [ "errorHandler" ];
   // 只对 /api 前缀的 url 路径生效
   config.errorHandler = {
     match: "/api",

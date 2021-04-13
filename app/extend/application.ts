@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const jenkinsapi = require("jenkins-api");
 const JENKINS = Symbol("Application#jenkins");
 

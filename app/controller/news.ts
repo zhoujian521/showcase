@@ -4,9 +4,10 @@ import { Controller } from "egg";
 const createRule = {
   accesstoken: "string",
   title: "string",
-  tab: { type: "enum", values: ["ask", "share", "job"], required: false },
+  tab: { type: "enum", values: [ "ask", "share", "job" ], required: false },
   content: "string",
 };
+
 
 export default class NewsController extends Controller {
   public async getList() {

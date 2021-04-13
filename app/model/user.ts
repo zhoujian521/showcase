@@ -1,6 +1,6 @@
-"use strict";
 
-module.exports = (app) => {
+
+module.exports = app => {
   const { STRING, INTEGER, DATE } = app.Sequelize;
 
   const Users = app.model.define("user", {
@@ -13,3 +13,4 @@ module.exports = (app) => {
 
   return Users;
 };
+
